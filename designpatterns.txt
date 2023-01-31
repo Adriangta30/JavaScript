@@ -1,0 +1,86 @@
+Atualmente não se concebe um processo de desenvolvimento de software sério sem a utilização da orientação a objetos, pois esta permite agregar qualidades importantes aos sistemas desenvolvidos sob seus paradigmas, como a extensibilidade e a reusabilidade. Contudo, somente por estar utilizando-a, não é garantia de obter essas qualidades. Para criar as melhores soluções é preciso seguir um processo detalhado para obter uma análise dos requisitos, funcionais ou não funcionais, e desenvolver um projeto que os satisfaça e que possibilite submetê-los a teste para constatar eventuais falhas, se deseja que o projeto tenha uma arquitetura flexível para acomodar futuros problemas e requisitos sem a necessidade da realização do re-projeto.
+
+Analisando o cotidiano do desenvolvimento de software é possível identificar que a procura por uma solução de um problema específico possui características idênticas, senão igual a encontrada em um projeto anteriormente desenvolvido, mas que devido à deficiência do processo, a solução e o problema não fora documentado e, às vezes, tão pouco compreendido em sua totalidade, impossibilitando o reaproveitamento das ideias e soluções. Desta forma, problemas idênticos que se repetem em outros contextos não são reconhecidos como tal, consumindo tempo e recursos em busca de soluções que em tese, já haviam sido encontradas.
+
+Uma coisa que os projetistas avançados sabem que não devem fazer é resolver cada problema a partir de princípios elementares ou do zero. Ao invés disso, eles reutilizam soluções que funcionaram no passado, e os utilizam repetidamente em seus projetos. É como resolver um problema matemático até então inédito, ou pelo menos desconhecido a alguém. Primeiro utiliza-se todos os conhecimentos e princípios matemáticos que se tem conhecimento e que seja útil na solução. Depois de algumas tentativas e uso das teorias matemáticas, chega-se à solução e a partir daí tem-se um “algoritmo” (estrutura) montado que pode ser utilizado para resolver problemas que sejam idênticos ao resolvido. É por isso que os padrões de projetos, design patterns, tem chamado a atenção e despertado o interesse dos projetistas de software, por proporcionar elementos que conduzem ao reaproveitamento de soluções, e não apenas a reutilização de código.
+
+Os padrões de projetos tornam mais fácil reutilizar soluções e arquiteturas bem sucedidas para construir softwares orientados a objetos de forma flexível e fácil de manter. O uso de padrões de projeto pode reduzir a complexidade do processo de projetar software. Além disso, o software orientado a objetos bem projetado possibilita aos projetistas reutilizar e empregar componentes preexistentes em sistemas futuros.
+
+Em software, os padrões de projeto não são classes nem objeto. Em vez disso, os projetistas usam esses padrões para construir conjuntos de classes e objetos. Para utilizá-los de maneira eficaz, os projetistas precisam se familiarizar com os padrões mais populares e eficazes utilizados pela engenharia de software e conhecer o seu contexto e escopo.
+
+A ideia de projetar soluções a partir de algo já conhecido e documentado não é nova e tão pouco teve origem na indústria de software, apesar de ela já demonstrar um interesse pelo tema. A ideia surgiu em 1977, quando Christopher Alexander publicou um catálogo com mais de 250 padrões para a arquitetura civil, que discutiam questões comuns da arquitetura, descrevendo em detalhe o problema e as justificativas de sua solução.
+
+Christopher Alexander descobriu que diminuindo o foco, ou seja, procurando estruturas que resolvam problemas similares, ele pode discernir similaridades entre projetos de alta qualidade. Ele chamou essas similaridades de “padrões”.
+
+Algum tempo depois ele formaliza seu método de descrição dos padrões, defendendo que seu uso não limitaria os arquitetos às soluções prescritas, mas garantiria a presença de elementos fundamentais, e a possibilidade de aperfeiçoá-la através das experiências adquiridas. Esse método chamou atenção da comunidade de software, fazendo que o tema ganhasse destaque nas conferências sobre orientação a objetos. Em 1995 Erich Gama, Richard Helm, Ralph Johnson, John Vlissides, conhecidos como os quatro amigos [Gang of Four - GoF], publicaram o livro sobre o título: “Design patterns – elements of reusable object-oriented software, Addison Wesley Longman”, que ganhou uma versão na língua portuguesa sobre o título de “Padrões de Projeto – Soluções reutilizáveis de software orientado a objetos. Bookman”. O livro é um catálogo que descreve 23 padrões de projeto cada um fornecendo uma solução para um problema de software, seu contexto, aplicação e suas eventuais conseqüências, dividindo-os em 3 categorias: padrões de criação, estruturais, e de comportamento.
+
+Definindo padrões de projeto
+Definir o que é um padrão de projeto de maneira clara e objetiva, tem sido o objetivo da comunidade de software, desde a década de 80.O primeiro a apresentar uma definição do que seria um padrão, foi o arquiteto de professor Christopher Alexandre, no seu livro “A Times Way of Building” (Oxford University Press, 1979), que é: “Cada padrão é uma regra de três partes, que expressa uma relação entre um certo contexto, um problema e uma solução”. Sendo assim para entender a necessidade, existência, de um padrão é necessário estudar suas partes: o problema, a solução e o contexto sobre o qual ele é aplicável.
+
+Dessa forma, resumidamente pode-se entender como padrão de projeto, como a solução recorrente para um problema em um contexto, mesmo que em projetos e áreas distintas. Observe que os termos chaves dessa definição são: contexto, problema e solução, o que torna obrigatório à compreensão inequívoca de cada um. Um contexto diz respeito ao ambiente, e as circunstâncias dentro do qual algo existe. O problema é a questão indefinida, algo que precisa ser investigado e solucionado. Normalmente, está atrelado ao contexto em que ocorre. Finalmente, a solução refere à resposta do problema que ajuda a solucioná-lo.
+
+Entretanto, se tivermos uma solução para um problema em um certo contexto, ela não necessariamente pode constituir um padrão, pois é necessário que ela tenha como característica a regularidade, isto é, ela se constituirá como um padrão se puder ser utilizada repetidamente.
+
+Segundo Christopher Alexander, “cada padrão descreve um problema no nosso ambiente e o núcleo da sua solução, de tal forma que você possa usar esta solução mais de um milhão de vezes, sem nunca faze-lo da mesma maneira”.
+
+O grupo dos quatro amigos classificou os padrões de projeto por dois critérios. O primeiro critério é a finalidade - reflete o que um padrão faz. Os padrões podem ter finalidades de criação, comportamento e estrutural. Os padrões de criação descrevem as técnicas para instanciar objetos (ou grupos de objetos), e possibilitam organizar classes e objetos em estrutura maiores, os de comportamento se caracterizam pela maneira pelas quais classes ou objetos interagem e distribuem responsabilidades e os estruturais lidam com a composição de classes ou objetos. O segundo critério é o escopo - especifica se o padrão é aplicado à classe ou objeto.
+
+Características de um padrão de projeto
+Embora um padrão seja a descrição de um problema, de uma solução genérica e sua justificativa, isso não significa que qualquer solução conhecida para um problema possa constituir um padrão, pois existem características obrigatórias que devem ser atendidas pelos padrões: .
+
+Devem possuir um nome, que descreva o problema, as soluções e consequências. Um nome permiti definir o vocabulário a ser utilizado pelos projetistas e desenvolvedores em um nível mais alto de abstração.
+Todo padrão deve relatar de maneira clara a qual (is)problema(s) ele deve ser aplicado, ou seja, quais são os problemas que quando inserido em um determinado contexto o padrão conseguirá resolvê-lo. Alguns podendo exigir pré-condições.
+Solução descreve os elementos que compõem o projeto, seus relacionamentos, responsabilidades e colaborações. Um padrão deve ser uma solução concreta, ele deve ser exprimido em forma de gabarito (algoritmo) que, no entanto, pode ser aplicado de maneiras diferentes.
+Todo padrão deve relatar quais são as suas consequências para que possa ser analisada a solução alternativa de projetos e para a compreensão dos benefícios da aplicação do projeto.
+Não pode ser considerado um padrão de projeto trecho de códigos específicos, mesmo que para o seu criador ele reflita um padrão, que soluciona um determinado problema, porque os padrões devem estar a um nível maior de abstração e não limitado a recursos de programação. Um padrão de projeto nomeia, abstrai e identifica os aspectos chaves de uma estrutura de projeto comum para torná-la útil para a criação de um projeto orientado a objetos reutilizável.
+
+A importância dos padrões de projeto
+O mais importante sobre os padrões é que eles são soluções aprovadas. Cada catálogo inclui apenas padrões que foram considerados úteis por diversos desenvolvedores em vários projetos. Os padrões catalogados também são bem definidos; os autores descrevem cada padrão com muito cuidado e em seu próprio contexto, portanto será fácil aplicar o padrão em suas próprias circunstâncias. Eles também formam um vocabulário comum entre os desenvolvedores.
+
+Quando os padrões não o ajudarão
+Os padrões são um mapa, não uma estratégica. Os catálogos geralmente apresentarão algum código-fonte como uma estratégica de exemplo, portanto eles não devem ser considerados como definitivos. Os padrões não ajudarão a determinar qual aplicação você deve estar escrevendo apenas como implementar melhor a aplicação assim que o conjunto de recursos e outras exigências forem determinados. Os padrões ajudam com o que e como, mas não com por que ou quando.
+
+O conceito de utilizar os padrões de forma indiscriminada é conhecida como antipadrões (anti patterns). De acordo com Andrew Koenig, se um padrão representa a “melhor prática”, então um antipadrão representa uma “lição aprendida”.
+
+Existem duas noções de antipadrões:
+
+Aqueles que descrevem uma solução ruim para um problema que resultou em uma situação ruim;
+Aqueles que descrevem como se livrar de uma situação ruim e como proceder dessa situação para uma situação boa.
+Em suma um antipadrão constitui ao uso indevido dos padrões de projeto, ou o seu uso exagerado, o que pode ser constatado pela utilização de padrões impróprios para um determinado contexto, ou uso inadequado. A utilização dos padrões proporciona um aumento na flexibilidade do sistema, entretanto pode deixá-lo mais complexo ou degradar a performance. Algumas perdas são toleráveis, mas subestimar os efeitos colaterais da adoção dos patterns, é um erro comum, principalmente daqueles que tomam o uso como um diferencial e não pela real necessidade.
+
+Como padrões de projeto solucionam problemas de projeto
+O alvo principal do uso dos padrões de projeto no desenvolvimento de software é o da orientação a objetos. Como os objetos são os elementos chaves em projetos OO, a parte mais difícil do projeto é a decomposição de um sistema em objetos. A tarefa é difícil porque muitos fatores entram em jogo: encapsulamento, granularidade, dependência, flexibilidade, desempenho, evolução, reutilização e assim por diante. Todos influenciam a decomposição, frequentemente de formas conflitantes.
+
+Muito dos objetos participantes provêm do método de análise. Porém, projetos orientados a objetos acabam sendo compostos por objetos que não possui uma contrapartida no mundo real.
+
+As abstrações que surgem durante um projeto são as chaves para torná-lo flexível. Os padrões de projeto ajudam a identificar abstrações menos óbvias bem como os objetos que podem capturá-las. Por exemplo, objetos que representam processo ou algoritmo não ocorrem na natureza, no entanto, eles são uma parte crucial de projetos flexíveis. Esses objetos são raramente encontrados durante a análise ou mesmo durante os estágios iniciais de um projeto; eles são descobertos mais tarde, durante o processo de tornar-se um projeto mais flexível e reutilizável.
+
+Como selecionar um padrão de projeto
+Escolher dentre os padrões existentes aquele que melhor soluciona um problema do projeto, sem cometer o erro de escolher de forma errônea e torná-lo inviável, é uma das tarefas mais difíceis. Em suma, a escolha de um padrão de projeto a ser utilizado, pode ser baseada nos seguintes critérios:
+
+Considerar como os padrões de projeto solucionam problemas de projeto.
+Examinar qual a intenção do padrão, ou seja, o que faz de fato o padrão de projeto, quais seus princípios e que tópico ou problema particular de projeto ele trata (soluciona).
+Estudar como os padrões se relacionam.
+Estudar as semelhanças existentes entre os padrões.
+Examinar uma causa de reformulação de projeto.
+Considerar o que deveria ser variável no seu projeto, ou seja, ao invés de considerar o que pode forçar uma mudança em um projeto, considerar o que você quer ser capaz de mudar sem reprojetá-lo.
+Como usar um padrão de projeto
+Depois de ter sido feita a escolha do(s) padrão(ões) a ser(em) utilizado(s) no projeto é necessária conhecer como utilizá-lo(s). Uma abordagem recomendada pela gangue dos quatros amigos para aplicar um padrão a um projeto é:
+
+Ler o padrão por completo uma vez, para obter sua visão geral. Conhecer o padrão principalmente a sua aplicabilidade e consequências são importantes para que ele realmente solucione o seu problema;
+Estudar seções Estrutura, Participantes e Colaborações. Assegurando-se de que compreendeu as classes e objetos no padrão e como se relacionam entre si;
+Escolher os nomes para os participantes do padrão que tenham sentido no contexto da aplicação;
+Definir as classes. Declarar as interfaces, estabelecer os seus relacionamentos de herança e definir as variáveis de instância que representam dados e referências a objetos. Identifique as classes existentes na aplicação que serão afetadas pelo padrão e modifique-as;
+Defina os nomes específicos da aplicação para as operações no padrão. Os nomes em geral dependem da aplicação. Use as responsabilidades e colaborações associadas com cada operação como guia;
+Implemente as operações para suportar as responsabilidades e colaborações presentes do padrão. A seção de Implementação oferece sugestões para guiá-lo na implementação.
+Essas são apenas diretrizes que podem ser utilizadas até que seja obtido experiência e conhecimento necessário para desenvolver uma maneira de trabalho particular com os padrões de projeto. Os padrões de projeto não devem ser aplicados indiscriminadamente. Frequentemente eles obtêm flexibilidade e variabilidade pela introdução de níveis adicionais de endereçamento indireto, e isso pode complicar um projeto e/ou custar algo em termos de desempenho. Um padrão de projeto deverá apenas ser aplicado quando a flexibilidade que ele oferece for realmente necessária.
+
+Principais padrões de projeto
+Uma rápida leitura dos códigos da VCL (Visual Component Library) do Delphiconstata-se que ela fora construído fazendo uso intensivo dos padrões de projetos. O que é muito bom, pois constata o nível de excelência da ferramenta. Isto devido ao Delphiimplementar completamente as boas práticas da orientação a objetos – OOP, que auxiliam na implementação de projetos reutilizáveis.
+
+Padrões de criação
+Os padrões de criação são aqueles que abstraem e ou adiam o processo criação dos objetos. Eles ajudam a tornar um sistema independentemente de como seus objetos são criados, compostos e representados. Um padrão de criação de classe usa a herança para variar a classe que é instanciada, enquanto um padrão de criação de objeto delegará a instanciação para outro objeto.
+
+Os padrões de criação tornam-se importantes à medida que os sistemas evoluem no sentido de dependerem mais da composição de objetos do que a herança de classes. O desenvolvimento baseado na composição de objetos possibilita que os objetos sejam compostos sem a necessidade de expor o seu interior como acontece na herança de classe, o que possibilita a definição do comportamento dinamicamente e a ênfase desloca-se da codificação de maneira rígida de um conjunto fixo de comportamentos, para a definição de um conjunto menor de comportamentos que podem ser compostos em qualquer número para definir comportamentos mais complexos.
+
+Há dois temas recorrentes nesses padrões. Primeiro todos encapsulam conhecimento sobre quais classes concretas são usadas pelo sistema. Segundo ocultam o modo como essas classes são criadas e montadas. Tudo que o sistema sabe no geral sobre os objetos é que suas classes são definidas por classes abstratas. Consequentemente, os padrões de criação dão muita flexibilidade no que é criado, quem cria, como e quando é criado. Eles permitem configurar um sistema com objetos “produto” que variam amplamente em estrutura e funcionalidade. A configuração pode ser estática (isto é, especificada em tempo de compilação) ou dinâmica (em tempo de execução).
